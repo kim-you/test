@@ -4,12 +4,12 @@
  -  **코드 구조 변경**
  
  ![enter image description here](https://lh3.googleusercontent.com/Iwe5hHf5yzGY_1gXZWNKkvyeM6C8LMSyDlG4afG7yRMB4rCCrsO9VAZ_z74a_zonLNEZ8DD1ZSYr)
-'''	
+	
 기존 EvaluateLD 함수에 과도하게 몰려있던 기능들을 모두 분산시켰습니다.  
 파일 입력~결과 출력까지의 모든 Process를 Phase 1 ~ 4로 정의하여 각 Phase#.h 에 관련된 함수들끼리 모아두었습니다.  
 main함수를 Function Call의 중심으로 하여 각 Phase의 결과물이 다음 Phase의 input으로 들어가게 됩니다.  
 
--  **상속, 다형성**
+  -  **상속, 다형성**
  
  ![enter image description here](https://lh3.googleusercontent.com/3TXj1QDtUi_uI1XROTv_YzWU71csffoyVAjsLR51S6vgZudxBDVS7MBcqsSpkVY6Xj7OxBD3Pnwt)
 
