@@ -6,18 +6,17 @@
  ![enter image description here](https://lh3.googleusercontent.com/Iwe5hHf5yzGY_1gXZWNKkvyeM6C8LMSyDlG4afG7yRMB4rCCrsO9VAZ_z74a_zonLNEZ8DD1ZSYr)
 	
 기존 EvaluateLD 함수에 과도하게 몰려있던 기능들을 모두 분산시켰습니다.  
-	파일 입력~결과 출력까지의 모든 Process를 Phase 1 ~ 4로 정의하여 각 Phase#.h 에 관련된 함수들끼리 모아두었습니다.  
-	main함수를 Function Call의 중심으로 하여 각 Phase의 결과물이 다음 Phase의 input으로 들어가게 됩니다.  
-	  
+파일 입력~결과 출력까지의 모든 Process를 Phase 1 ~ 4로 정의하여 각 Phase#.h 에 관련된 함수들끼리 모아두었습니다.  
+main함수를 Function Call의 중심으로 하여 각 Phase의 결과물이 다음 Phase의 input으로 들어가게 됩니다.  
   
- -  **상속, 다형성**
+-  **상속, 다형성**
  
  ![enter image description here](https://lh3.googleusercontent.com/3TXj1QDtUi_uI1XROTv_YzWU71csffoyVAjsLR51S6vgZudxBDVS7MBcqsSpkVY6Xj7OxBD3Pnwt)
 
 기존 코드의 Annotation과 Data(LogLD) 클래스는 유사한 멤버 변수와 함수를 다수 가지고 있었습니다.  
 이러한 중복되는 요소들을 상위 클래스에서 상속받아 코드를 좀더 간소화 시킬 수 있었습니다.  
-	또한 데이터를 로드하거나 선을 그리는 등의 동작들이 기존에는 한 함수에서 동일한 코드를 두번 중복하여 처리했습니다.  
-	이러한 중복을 없애기 위해 템플릿 함수를 이용하여 매개변수만 변경하여 두번 호출하는 방법으로 변경하였습니다.  
+또한 데이터를 로드하거나 선을 그리는 등의 동작들이 기존에는 한 함수에서 동일한 코드를 두번 중복하여 처리했습니다.  
+이러한 중복을 없애기 위해 템플릿 함수를 이용하여 매개변수만 변경하여 두번 호출하는 방법으로 변경하였습니다.  
 	  
 	
  -  **네이밍 규칙 통일**
