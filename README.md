@@ -78,10 +78,10 @@ Annotation, LogLD, Matched Point에 대한 표시 여부를 각각 선택할 수
 기존 코드에 존재하는 3가지 버그를 수정하였습니다.  
 
   1) Sloped Threshold가 수직선에서 비정상 작동하는 현상을 수정.  
-  2) Match 알고리즘에서 특정 상황 (LogLD가 비교 대상인 Annotation의 Y축 범위를 초과할 때) 일 때,
+  2) Match 알고리즘에서 특정 상황 (LogLD가 비교 대상인 Annotation의 Y축 범위를 초과할 때) 일 때,  
    LogLD의 양 끝 점이 카운트 되지 않는 현상을 수정.  
-  3) Float 형의 Threshold 값이 비교 연산시 같은 값의 Double형 변수을 걸러내지 못하는 현상
-    수정 (ex. (Float)0.7 > (double)0.7은 True가 반환됩니다.)  
+  3) Float 형의 Threshold 값이 비교 연산시 같은 값의 Double형 변수을 걸러내지 못하는 현상 수정  
+  (ex. (Float)0.7 > (double)0.7은 True가 반환됩니다.)  
 
 버그 수정에 의한 결과의 변화는 result_change.txt에 기록해 두었습니다.  
 .  
