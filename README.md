@@ -50,7 +50,7 @@ Function Call 위주의  플로우에서 전달되는 파라미터의 개수를 
 
 기존 알고리즘 대신 Hungarian Assignment를 사용한 Matching 알고리즘으로 변경하였습니다.
 LogLD Set과 Annotation Set 내의 모든 선 조합에서 가장 높은 Cost를 가지는 조합의 최적해를 구할 수 있습니다.
-이 변경으로 4125개의 샘플 중 7개의 샘플에서 매칭 결과가 변했습니다. 해당 내용은 match_change.txt 파일에서 확인하실 수 있습니다.
+이 변경으로 4125개의 샘플 중 7개의 샘플에서 매칭 결과가 변했습니다. 해당 내용은 match_change.txt 파일에서 확인하실 수 있습니다.  
 .  
 .  
  -  **추가 Parameters & 디버깅용 옵션**
@@ -61,7 +61,7 @@ LogLD Set과 Annotation Set 내의 모든 선 조합에서 가장 높은 Cost를
 기존에 지정 가능했던 Threshold 외에도, 알고리즘의 상수값이나 함수 내부에 선언된 정수값 들을 바깥으로 빼냈습니다.  
 이러한 값들에 따른 변화를 관찰해야 할 때 유용할 것이라고 판단했습니다.  
 
-또한 Annotation Line의 전처리(임계 길이 이하의 선들을 Ambiguous로 처리) 과정 역시 On/Off 가능하게 변경하였습니다.
+또한 Annotation Line의 전처리(임계 길이 이하의 선들을 Ambiguous로 처리) 과정 역시 On/Off 가능하게 변경하였습니다.  
 
 
 ![enter image description here](https://lh3.googleusercontent.com/7419ZU2svP9flnSleQGl7MGIBcFIQc9Vfae8UHSLht-Mh6ULOdVSQEjpFhKS1zIQc35HMUropNnF)
@@ -69,7 +69,7 @@ LogLD Set과 Annotation Set 내의 모든 선 조합에서 가장 높은 Cost를
 
 마지막으로 디버깅 Image 표시 옵션을 추가하였습니다.  
 Annotation, LogLD, Matched Point에 대한 표시 여부를 각각 선택할 수 있으며,  
-각 Line들의 색상 역시 Parameter 창에서 변경 가능하도록 변경하였습니다.
+각 Line들의 색상 역시 Parameter 창에서 변경 가능하도록 변경하였습니다.  
 .  
 .  
  - **버그 수정**
@@ -82,12 +82,12 @@ Annotation, LogLD, Matched Point에 대한 표시 여부를 각각 선택할 수
      3) Float 형의 Threshold 값이 비교 연산시 같은 값의 Double형 변수을 걸러내지 못하는 현상
     수정 (ex. (Float)0.7 > (double)0.7은 True가 반환됩니다.)
 
-버그 수정에 의한 결과의 변화는 result_change.txt에 기록해 두었습니다.
+버그 수정에 의한 결과의 변화는 result_change.txt에 기록해 두었습니다.  
 .  
 .  
  - **기타**
 
 Evaluate Function에서 매크로 함수를 사용하여 코드 가독성을 약간 높였습니다.  
-Slope Threshold 계산 과정의 일부를 Annotation 클래스의 멤버 함수로 변경하였습니다.(Sin값 반환까지의 과정)
+Slope Threshold 계산 과정의 일부를 Annotation 클래스의 멤버 함수로 변경하였습니다.(Sin값 반환까지의 과정)  
 
 
