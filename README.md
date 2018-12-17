@@ -51,8 +51,8 @@ Function Call 위주의  플로우에서 전달되는 파라미터의 개수를 
 기존 알고리즘 대신 Hungarian Assignment를 사용한 Matching 알고리즘으로 변경하였습니다.
 LogLD Set과 Annotation Set 내의 모든 선 조합에서 가장 높은 Cost를 가지는 조합의 최적해를 구할 수 있습니다.
 이 변경으로 4125개의 샘플 중 7개의 샘플에서 매칭 결과가 변했습니다. 해당 내용은 match_change.txt 파일에서 확인하실 수 있습니다.
-
-
+.  
+.  
  -  **추가 Parameters & 디버깅용 옵션**
  
 ![enter image description here](https://lh3.googleusercontent.com/0VKDjSlY2hWIknKU6jBL8t8hmjpu3Z1kIiKatCwaR1bxkCSFzFnN7B9W2ECluyas2gm8Evazb4-7)
