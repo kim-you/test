@@ -6,29 +6,28 @@
  ![enter image description here](https://lh3.googleusercontent.com/Iwe5hHf5yzGY_1gXZWNKkvyeM6C8LMSyDlG4afG7yRMB4rCCrsO9VAZ_z74a_zonLNEZ8DD1ZSYr)
 	
 기존 EvaluateLD 함수에 과도하게 몰려있던 기능들을 모두 분산시켰습니다.  
-	파일 입력~결과 출력까지의 모든 Process를 Phase 1 ~ 4로 정의하여 각 Phase#.h 에 관련된 함수들끼리 모아두었습니다.
-	main함수를 Function Call의 중심으로 하여 각 Phase의 결과물이 다음 Phase의 input으로 들어가게 됩니다.
+	파일 입력~결과 출력까지의 모든 Process를 Phase 1 ~ 4로 정의하여 각 Phase#.h 에 관련된 함수들끼리 모아두었습니다.  main함수를 Function Call의 중심으로 하여 각 Phase의 결과물이 다음 Phase의 input으로 들어가게 됩니다.
 
  -  **상속, 다형성**
  
  ![enter image description here](https://lh3.googleusercontent.com/3TXj1QDtUi_uI1XROTv_YzWU71csffoyVAjsLR51S6vgZudxBDVS7MBcqsSpkVY6Xj7OxBD3Pnwt)
 
-기존 코드의 Annotation과 Data(LogLD) 클래스는 유사한 멤버 변수와 함수를 다수 가지고 있었습니다. 이러한 중복되는 요소들을 상위 클래스에서 상속받아 코드를 좀더 간소화 시킬 수 있었습니다.
+기존 코드의 Annotation과 Data(LogLD) 클래스는 유사한 멤버 변수와 함수를 다수 가지고 있었습니다.  이러한 중복되는 요소들을 상위 클래스에서 상속받아 코드를 좀더 간소화 시킬 수 있었습니다.  
 	또한 데이터를 로드하거나 선을 그리는 등의 동작들이 기존에는 한 함수에서 동일한 코드를 두번 중복하여 처리했습니다. 이러한 중복을 없애기 위해 템플릿 함수를 이용하여 매개변수만 변경하여 두번 호출하는 방법으로 변경하였습니다.
 	
  -  **네이밍 규칙 통일**
  
 ![enter image description here](https://lh3.googleusercontent.com/D3jwk52vOdCaYP6EQ041Q1OR0rEX53nZB002It5OnsbM5wKzSF-obqYIHi89f4MSsKEhoDEpgGei)
 	
-함수, 변수, 전역변수(Threshold)들의 네이밍을 통일했습니다.
-	모든 단어간 구분은 _ 기호를 사용하며,
-	변수는 모두 소문자,
-	함수는 각 단어의 첫글자를 대문자,
-	전역변수(Threshold)들은 모두 대문자를 사용하여 구분하기 쉽도록 하였습니다.
+함수, 변수, 전역변수(Threshold)들의 네이밍을 통일했습니다.  
+	모든 단어간 구분은 _ 기호를 사용하며,  
+	변수는 모두 소문자,  
+	함수는 각 단어의 첫글자를 대문자,  
+	전역변수(Threshold)들은 모두 대문자를 사용하여 구분하기 쉽도록 하였습니다.  
 	![enter image description here](https://lh3.googleusercontent.com/0idDpNCwYjccOLIBLsWvOJSS3BWifmYs4YX6iwEmlGs2lxZ1yqgJBHTawiTA4Jt88RdBpNq3Vv_J)
 	
-또한 CALSS나 datas 같이 오타나 애매한 표현을 수정하였으며,
-	마지막으로 Annotation와 대응되는 의미인 Data가 포함된 변수,함수명들을 더 	명확한 의미인 LogLD로 일괄 변경하였습니다.
+또한 CALSS나 datas 같이 오타나 애매한 표현을 수정하였으며,  
+	마지막으로 Annotation와 대응되는 의미인 Data가 포함된 변수,함수명들을 더 명확한 의미인 LogLD로 일괄 변경하였습니다.
 
  - **전역변수 선언을 통한 파라미터 개수 축소**
 
