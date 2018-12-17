@@ -33,7 +33,7 @@ main함수를 Function Call의 중심으로 하여 각 Phase의 결과물이 다
 	![enter image description here](https://lh3.googleusercontent.com/0idDpNCwYjccOLIBLsWvOJSS3BWifmYs4YX6iwEmlGs2lxZ1yqgJBHTawiTA4Jt88RdBpNq3Vv_J)
 	
 또한 CALSS나 datas 같이 오타나 애매한 표현을 수정하였으며,  
-마지막으로 Annotation와 대응되는 의미인 Data가 포함된 변수,함수명들을 더 명확한 의미인 LogLD로 일괄 변경하였습니다.
+마지막으로 Annotation와 대응되는 의미인 Data가 포함된 변수,함수명들을 더 명확한 의미인 LogLD로 일괄 변경하였습니다.  
 .  
 .  
 
