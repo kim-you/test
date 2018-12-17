@@ -1,7 +1,4 @@
 ## LDEvaluationTool Refactorying
-
-
-
 ## 주 변경점
 
  -  **코드 구조 변경**
@@ -12,8 +9,6 @@
 	파일 입력~결과 출력까지의 모든 Process를 Phase 1 ~ 4로 정의하여
 	각 Phase#.h 에 관련된 함수들끼리 모아두었습니다.
 	main함수를 Function Call의 중심으로 하여 각 Phase의 결과물이 다음 Phase의 input으로 들어가게 됩니다.
-
-
 
  -  **상속, 다형성**
  
@@ -42,14 +37,11 @@
 	
 각종 Threshold들을 전역변수로 변경하여 프로그램 어디에서나 이 변수 값들에 접근 할 수 있도록 하였습니다. 또한 결과값이 저장되는 Performance 클래스 객체들 역시 전역변수로 변경하여 Function Call 위주의  플로우에서 전달되는 파라미터의 개수를 간소화시켰습니다.
 	
-
  -  **Matching 알고리즘 변경**
 
 기존 알고리즘 대신 Hungarian Assignment를 사용한 Matching 알고리즘으로 변경하였습니다.
 LogLD Set과 Annotation Set 내의 모든 선 조합에서 가장 높은 Cost를 가지는 조합의 최적해를 구할 수 있습니다.
 이 변경으로 4125개의 샘플 중 7개의 샘플에서 매칭 결과가 변했습니다. 해당 내용은 match_change.txt 파일에서 확인하실 수 있습니다.
-
-
 
 
  -  **추가 Parameters & 디버깅용 옵션**
@@ -73,7 +65,6 @@ Annotation, LogLD, Matched Point에 대한 표시 여부를 각각 선택할 수
 
  - **버그 수정**
 
-
 기존 코드에 존재하는 3가지 버그를 수정하였습니다.
 
   1) Sloped Threshold가 수직선에서 비정상 작동하는 현상을 수정. 	
@@ -86,7 +77,7 @@ Annotation, LogLD, Matched Point에 대한 표시 여부를 각각 선택할 수
 
  - **기타**
 
-	Evaluate Function에서 매크로 함수를 사용하여 코드 가독성을 약간 높였습니다.
+Evaluate Function에서 매크로 함수를 사용하여 코드 가독성을 약간 높였습니다.
 Slope Threshold 계산 과정의 일부를 Annotation 클래스의 멤버 함수로 변경하였습니다.(Sin값 반환까지의 과정)
 
 
